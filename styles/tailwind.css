@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .image {
+    @apply border-red-900 rounded-lg shadow-lg max-w-md mx-auto
+  }
+}

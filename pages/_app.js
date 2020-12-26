@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Attia Blog 1</title>
       </Head>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen dark:bg-gray-900">
         <header className="w-full h16 border-b border-purple-500 flex items-center justify-center px-3 py-2">
           <h2 className="text-2xl text-purple-500 flex-1">Attia Blog</h2>
           <nav>

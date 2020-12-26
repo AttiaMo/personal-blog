@@ -1,5 +1,6 @@
 import Head from "next/head";
-import ReactMarkdown from "react-markdown";
+const ReactMarkdownWithHtml = require('react-markdown/with-html')
+
 import CodeBlock from "../../components/CodeBlock";
 
 import { postSlugs, postForSlug } from "../../posts";
@@ -12,10 +13,10 @@ function Post({ frontmatter, body }) {
         <title>{frontmatter.title} | Attia Blog</title>
       </Head>
       <div className="w-full">
-      <article className="prose max-w-none">
+      <article className="prose max-w-none dark:prose-dark">
           <h1>{frontmatter.title}</h1>
           <p className="italic">{frontmatter.date}</p>
-          <ReactMarkdown source={body} renderers={{ code: CodeBlock }} />
+          <ReactMarkdownWithHtml allowDangerousHtml source={body} renderers={{ code: CodeBlock }} />
         </article>
       </div>
     </>
